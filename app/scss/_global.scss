@@ -1,4 +1,22 @@
 
 body {
+   font-size: 16px;
+   line-height: normal;
+   // @extend %dmsans-700;
+   font-family: 'DMSans-Bold', sans-serif;
+   font-weight: 700;
+   color: $default-color;
 
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.container2 {
+   max-width: 1800px;
+   margin: 0 auto;
+   padding: 0 15px;
 }
