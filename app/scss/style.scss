@@ -26,8 +26,7 @@
       font-size: 15px;
       line-height: 12px;
       color: #436372;
-      font-family: 'Rubik-Medium', sans-serif;
-      font-weight: 500;
+      @extend %rubik-500;
    }
    &__list-link:hover::after{
       content: ' +';
@@ -180,6 +179,7 @@
       line-height: 16px;
       &:last-child{
          border-right: none;
+         padding: 0 0 0 16px;
       }
    }
    
