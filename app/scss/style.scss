@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -181,10 +182,111 @@
          border-right: none;
          padding: 0 0 0 16px;
       }
-   }
-   
-
+   }   
 }
 
+.top-slider{
+   &__cover{
+      background: #fcd7b6 url(../images/top-bg_circle.png) 83% 50%/630px  no-repeat;
+      padding: 220px 0 44px;
+   
+   }
+   &__wrapper{
+      display: flex;
+      justify-content: space-between;
+   }
+   &__title{
+      max-width: 500px;
+      @extend %rubik-500;
+      color: $title-color;
+      font-size: 72px;
+      line-height: 70px;
+      margin-bottom: 42px;
+   }
+   &__text{
+      @extend %rubik-400;
+      color: #436372;
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 42px;
+   }
+   &__link{
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      @extend %btn;
+      padding: 22px 18px 22px 28px;
+      margin-bottom: 200px;
+   }
+   &__link-img{
+      height: 100%;
+      padding-left: 60px;
+   }
+   &__img{
+      height: 100%;
+      width: 640px;
+      padding-top: 50px;
+   }
+   .slick-dots{
+      display: flex;
+      justify-content: center;
+      li{
+         padding: 0 10px;
+         button{
+            padding: 9px;
+            @extend %rubik-500;
+            font-size: 11px;
+            line-height: 8px;
+            color: rgba(36, 63, 77, 0.3) ;
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+         }
+         &.slick-active{
+            button{
+               background-color: rgba(255, 255, 255, 1);
+               color: $title-color;
+            }
+         }
+      }
+   } 
+}
+
+.top-info{
+   &__inner{
+      background-color: $bg-card;
+      padding: 46px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+   }
+   &__item{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 300px;
+   }
+   &__item-img{
+      padding-top: 10px;
+     width: 50px;
+   }
+   &__item-content{
+      padding-left: 20px;
+      max-width: 240px;
+   }
+   &__item-subtitle{
+      @extend %dmsans-700;
+      font-size: 18px;
+      line-height: 40px;
+      color: #414141;
+   }
+   &__item-text{
+      @extend %dmsans-400;
+      line-height: 30px;
+      color: #585858;
+   }
+}
 
 @import 'media';
