@@ -35,6 +35,9 @@ $bg-btn: #a3bbc8;
 }
 
 %btn{
+   display: inline-flex;
+   align-items: center;
+   justify-content: space-between;
    background-color: $bg-btn;
    @extend %rubik-500;
    color: #fff;

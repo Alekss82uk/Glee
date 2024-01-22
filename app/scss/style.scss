@@ -90,7 +90,304 @@
    }
 }
 
+// /---------top-slider----------/
+.top-slider{
+  margin-bottom: 70px;
+   &__cover{
+      background: #fcd7b6 url(../images/top-bg_circle.png) 83% 50%/630px  no-repeat;
+      padding: 220px 0 44px;
+   }
+   &__wrapper{
+      display: flex;
+      justify-content: space-between;
+   }
+   &__title{
+      max-width: 500px;
+      @extend %rubik-500;
+      color: $title-color;
+      font-size: 72px;
+      line-height: 70px;
+      margin-bottom: 42px;
+   }
+   &__text{
+      @extend %rubik-400;
+      color: #436372;
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 42px;
+   }
+   &__link{
+      @extend %btn;
+      padding: 22px 18px 22px 28px;
+      margin-bottom: 200px;
+   }
+   &__link-img{
+      height: 100%;
+      padding-left: 60px;
+   }
+   &__img{
+      height: 100%;
+      width: 640px;
+      padding-top: 50px;
+   }
+   .slick-dots{
+      display: flex;
+      justify-content: center;
+      li{
+         padding: 0 10px;
+         button{
+            padding: 9px;
+            @extend %rubik-500;
+            font-size: 11px;
+            line-height: 8px;
+            color: rgba(36, 63, 77, 0.3) ;
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+         }
+         &.slick-active{
+            button{
+               background-color: rgba(255, 255, 255, 1);
+               color: $title-color;
+            }
+         }
+      }
+   } 
+}
 
+.top-info{
+   &__inner{
+      background-color: $bg-card;
+      padding: 46px 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+   }
+   &__item{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 300px;
+   }
+   &__item-img{
+      padding-top: 10px;
+     width: 50px;
+   }
+   &__item-content{
+      padding-left: 20px;
+      max-width: 240px;
+   }
+   &__item-subtitle{
+      @extend %dmsans-700;
+      font-size: 18px;
+      line-height: 40px;
+      color: #414141;
+   }
+   &__item-text{
+      @extend %dmsans-400;
+      line-height: 30px;
+      color: #585858;
+   }
+}
+
+.products{
+  margin-bottom: 50px;
+  &__top{
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 30px;
+  }
+}
+
+.product-item{
+  max-width: 270px;
+  height: 380px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  padding: 26px 16px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &__img-box{
+    position: relative;
+    height: 260px;
+    padding-bottom: 26px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    
+  }
+  &__link-box{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    transform: translateY(300%);
+    transition: all .2s;
+  }
+  &__link{
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    padding: 13px 0;
+    transition: all .3s;
+    path{
+      transition: all .3s;
+    }
+  }
+  &__link:hover{
+    background-color: $bg-btn;
+    path{
+      fill:#fff;
+    }
+  }
+  &__link:last-child{
+    padding: 14px 0;
+  }
+  &__images{
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  &__subtitle{
+    margin-top: auto;
+    @extend %dmsans-500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $title-color;
+  }
+  &__price{
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 40px;
+    color: $bg-btn;
+  }
+  &:hover{
+    .product-item__link-box{
+      transform: translateY(0);
+    }
+  }
+
+}
+
+.prom-product{
+  padding-top: 140px;
+  margin-bottom: 100px;
+  &__inner{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #feefe2;
+    padding: 100px 20px;
+  }
+  &__images{
+    margin-top: -200px;
+    height: 420px;
+  }
+  &__item-box{
+    padding-left: 24px;
+    max-width: 350px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 32px;
+    color: $title-color;
+    margin-bottom: 24px;
+  }
+  &__text{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $title-color;
+    margin-bottom: 24px;
+  }
+  &__link{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(67, 99, 114, 0.4) ;
+    color: #436372;
+    font-size: 15px;
+    line-height: 12px;
+    cursor: pointer; 
+  }
+  &__link-img{
+    height: 100%;
+    padding-left: 44px;
+  }
+}
+
+.new-design{
+  margin-bottom: 122px;
+  &__top{
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px 30px;
+  }
+  &__item{
+    max-width: 370px;
+    height: 250px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 40px 0 40px 40px;
+    position: relative;
+    overflow: hidden;
+     
+  }
+  &__title{
+    @extend %dmsans-700;
+   color: #191919;
+   font-size: 20px;
+   line-height: normal;
+   margin-bottom: 16px;
+   max-width: 180px;
+  }
+  &__style{
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: normal;
+    color: $bg-btn;
+  }
+  &__images{
+    position: absolute;
+    left: 100px;
+    bottom: 30px;
+  }
+  &__chair{
+    left: 200px;
+    top:50%;
+    transform: translateY(-50%);
+  }
+
+}
+
+
+
+// /---------footer------------/
 .footer-top{
    padding: 80px 0 72px;
    border-bottom: 1px solid #dae4e9;
@@ -185,108 +482,5 @@
    }   
 }
 
-.top-slider{
-   &__cover{
-      background: #fcd7b6 url(../images/top-bg_circle.png) 83% 50%/630px  no-repeat;
-      padding: 220px 0 44px;
-   
-   }
-   &__wrapper{
-      display: flex;
-      justify-content: space-between;
-   }
-   &__title{
-      max-width: 500px;
-      @extend %rubik-500;
-      color: $title-color;
-      font-size: 72px;
-      line-height: 70px;
-      margin-bottom: 42px;
-   }
-   &__text{
-      @extend %rubik-400;
-      color: #436372;
-      font-size: 18px;
-      line-height: 30px;
-      margin-bottom: 42px;
-   }
-   &__link{
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-      @extend %btn;
-      padding: 22px 18px 22px 28px;
-      margin-bottom: 200px;
-   }
-   &__link-img{
-      height: 100%;
-      padding-left: 60px;
-   }
-   &__img{
-      height: 100%;
-      width: 640px;
-      padding-top: 50px;
-   }
-   .slick-dots{
-      display: flex;
-      justify-content: center;
-      li{
-         padding: 0 10px;
-         button{
-            padding: 9px;
-            @extend %rubik-500;
-            font-size: 11px;
-            line-height: 8px;
-            color: rgba(36, 63, 77, 0.3) ;
-            width: 32px;
-            height: 32px;
-            border: none;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.3);
-         }
-         &.slick-active{
-            button{
-               background-color: rgba(255, 255, 255, 1);
-               color: $title-color;
-            }
-         }
-      }
-   } 
-}
-
-.top-info{
-   &__inner{
-      background-color: $bg-card;
-      padding: 46px 0;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-   }
-   &__item{
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      width: 300px;
-   }
-   &__item-img{
-      padding-top: 10px;
-     width: 50px;
-   }
-   &__item-content{
-      padding-left: 20px;
-      max-width: 240px;
-   }
-   &__item-subtitle{
-      @extend %dmsans-700;
-      font-size: 18px;
-      line-height: 40px;
-      color: #414141;
-   }
-   &__item-text{
-      @extend %dmsans-400;
-      line-height: 30px;
-      color: #585858;
-   }
-}
 
 @import 'media';
